@@ -1,172 +1,156 @@
 # (1)       **********************************  Data Types  ******************************************
 
 # 1   strings
-
 "hello"
-#are written in double quotes 
+#are written in double quotes
 
-print("hello"[0])#prints single character of string 
-#always start from zero 
+print("hello"[0])  #prints single character of string
+#always start from zero
 #######    the method to take single character is called subscripting     #######
 
 ######    the number in square brackets determines the which character to take or choose (goes from 0 to n)     ######
 # example (to print o form hello we do )
-print ("hello"[4])
-
-
+print("hello"[4])
 
 # 2 integers
 
-#if we write a code like 
-print ("345"+"4567")
+#if we write a code like
+print("345" + "4567")
 # +**************it is a string not integer *****************
 
-#in python to write integer we directly write  the numbers 
-# example 
-print (123 + 345 + 445)
-# when we write large numbers we can use "_"as the comma that we use to use in maths for example 6,53,123 in indian system 
-# here compiler takes it as a single no., not a different one 
+#in python to write integer we directly write  the numbers
 # example
-print (6_53_123)
-
-
+print(123 + 345 + 445)
+# when we write large numbers we can use "_"as the comma that we use to use in maths for example 6,53,123 in indian system
+# here compiler takes it as a single no., not a different one
+# example
+print(6_53_123)
 
 # 3 float
 
-#just using the decimal in between the number makes it a floating point number 
+#just using the decimal in between the number makes it a floating point number
 # example we want to print  3.23214
-# So we do it like this 
+# So we do it like this
 print(3.14159)
 
+# 4 boolean
 
-
-# 4 boolean 
-
-# it only has 2 values 
-# 1.   True 
-# 2.   False 
+# it only has 2 values
+# 1.   True
+# 2.   False
 # we use the above two with both having 1st letter as capital
-# example 
+# example
 True
 False
 
-
-
-
-
-
-
-
-
-
-
-
-
 # (2)                   **************               functions              *******************
 
-
-
-# previously we used the len function to find the length of the string but we got an error when we did something like this 
-num_char = len (input ("what is your name ?"))
+# previously we used the len function to find the length of the string but we got an error when we did something like this
+num_char = len(input("what is your name ?"))
 # print ("your name is "+ num_char +" characters long")
 
-# here(above line of code which is commented) we get the  error because of the use of different data types being used all together 
-# string + integer is happening which is wrong 
+# here(above line of code which is commented) we get the  error because of the use of different data types being used all together
+# string + integer is happening which is wrong
 # hence the error
 
+# 1  type ( ) function
 
-
-# 1  type ( ) function 
-
-# simlar to len to check we use type function to check the data type of anything 
-# example 
-print (type (num_char))
-# hence in above print statement "your name is "+ num_char  doesnt make any sense  
+# simlar to len to check we use type function to check the data type of anything
+# example
+print(type(num_char))
+# hence in above print statement "your name is "+ num_char  doesnt make any sense
 # example 2
 print(type(len(input("what is your name ?"))))
- 
 
-
-# 2   str ( ) function ---->   Type casting or type conversion  
+# 2   str ( ) function ---->   Type casting or type conversion
 
 # to do type casting we use a function called str() [ str covert to string data type ]
-# example 
-new_num_char =str(num_char)
-print (type (new_num_char))
+# example
+new_num_char = str(num_char)
+print(type(new_num_char))
 # here we took int into str function which convrts data to string and then stored the new thing into the new_num_char variable)
 #the above code can be used in the problem that we faced in between line 75 & line 76
 
 # ******************************* data type conversion list *****************************************
-# to convert we use 
+# to convert we use
 
 #           SYNTAX        new variable = data_type(the thing to be converted)
 # a=int()
 # a=float()
 # a=str()
 
-
-
 # 3   round() function ---->   Used to round of numbers
 # in python we use round function to convert the decimal or floating numbers to whole numbers (to eleminate trailing digits after the decimal)
-# example 
-print (round (5649.49857564577))
+# example
+print(round(5649.49857564577))
 
-# we can also round of our trailing digits to specified digts easily in python by using the command as follows 
-# we use a comma after using the normal round function to specify the number of the digits needed to be shown in the output 
-# example 
-print (round (45.77766767564, 2))
+# we can also round of our trailing digits to specified digts easily in python by using the command as follows
+# we use a comma after using the normal round function to specify the number of the digits needed to be shown in the output
+# example
+print(round(45.77766767564, 2))
 
+# Another way to modify numbers is
+# instead of dividing
+print(8 / 3)
+# we can use floor division
+# whenever we divide any number by any other number the reult is always get a float number
+# but we want a integer with round offed the number we use  (//) division
+print(8 // 3)
+# the result is a integer  with no decimal places
 
+# we can  also  use operators like (+= -= *= /=) these are really handy
 
-
-
-
-
-
-
-
-
-
+# FSTRINGS
+score = 0
+# print ("your score is " + score)  here we  got a type error as it one integer and other is string so cant be added together
+# but we do it like this  it works
+print("your score is " + str(score))
+# this is time consuming as  we need to convert each of the data one by one .  hence we need more convenient way
+height = 1.8  # float data type
+iswinning = True  # boolean type
+# lets say we have all the above data types and we want to mix all of the above into the string .
+# converting each of the above to string is waste of time so in python we use the fstring command to solve the problem
+# example
+print(
+    f"your score is {score}, your height is {height} and your team is winning {iswinning} "
+)
 
 # (3)        ****************************   Mathematical Operators  ****************************
 
-# 1 + sign 
-# we saw it being used for joning sentences and adding things 
-# example 
-print(3+5)
+# 1 + sign
+# we saw it being used for joning sentences and adding things
+# example
+print(3 + 5)
 
-# 2 "-"sign 
-# it is used to do subtration 
-# example 
-print(45-40)
+# 2 "-"sign
+# it is used to do subtration
+# example
+print(45 - 40)
 
 # 3 "*" sign
 # it is used lto perform multiplication operation
-# example 
-print(3*3)
+# example
+print(3 * 3)
 
-# 4 "/"sign 
-# it is used to divide  operation 
-# example 
-print(6/3)
+# 4 "/"sign
+# it is used to divide  operation
+# example
+print(6 / 3)
 # when we divide we get result in float it happens in python and is normal
 
 # 5 "**" sign
-# it is the raise to the power operation  
-# example 
+# it is the raise to the power operation
+# example
 print(2**5)
 
+# ********* things to remember when using operations
 
-
-
-# ********* things to remember when using operations 
-
-# 1 when more no of operators are there need to follow priority order 
+# 1 when more no of operators are there need to follow priority order
 # PEMDAS          (BODMAS)
-# PYRENTHESIS ()    BRACKET 
+# PYRENTHESIS ()    BRACKET
 # EXPONENT    **    ORDER
 
-# THE  BELOW HAVE  SAME LEVEL OF ATHORITY OR PRIORITY 
+# THE  BELOW HAVE  SAME LEVEL OF ATHORITY OR PRIORITY
 #             **********calculation is done from left to right***********
 # DIVISION     /    DIVISION     MULTIPLICATION *  MULTIPLICATION
 # ADDITION     +    ADDITION     SUBTRACTION  -    SUBTRACTION
