@@ -21,4 +21,7 @@ print("₹"+ str(round(z2,2)))
 #  to solve this we use format function which allows us to change the display format 
 print( "Each person should pay :  ₹" + str("{:.2f}".format(round(z,3))))
 print( "Each person should pay :  ₹" + str("{:.2f}".format(z)))
-# doesnt need round function if we use format to print decimal places 
+# doesnt need round function if we use format to print decimal places
+ 
+# syntax    --------------------->  variable = "{:.decimalplacesrequired}".format (variable to be formatted)
+# ------------------------------->    x =  "{:.2f}".format(z)
