@@ -1,8 +1,24 @@
-# Code below this line 👇
+#If the bill was $150.00, split between 5 people, with 12% tip.
 
-print ("Welcome to Bill Splitter")
-totalbill = input ("What was your total Bill Amount ?\n")
-Tip = input ("What percentage of Tip would you like to give ?\n ")
-people = input ("Number of people to split bill among \n")
-z = float(totalbill)/int(people)  * (1+(float(Tip)/100))
-print( "Each person should pay : " + str(round(z,2)))
+#Each person should pay (150.00 / 5) * 1.12 = 33.6
+#Format the result to 2 decimal places = 33.60
+
+#Tip: There are 2 ways to round a number. You might have to do some Googling to solve this.💪
+
+#Write your code below this line 👇
+print("Welcome to Bill Splitter")
+totalbill = input("What was your total Bill Amount ? \n₹")
+Tip = input("What percentage of Tip would you like to give ?\n ")
+people = input("Number of people to split bill among \n")
+
+z = (float(totalbill) +(float(totalbill)* (float(Tip) / 100)))/int(people)
+z2= (1+ (float(Tip) / 100)) * float(totalbill)/int (people)
+
+print( "Each person should pay :  ₹" + str(round(z,3)))
+print("₹"+ str(round(z2,2)))
+
+# here round function doesnt show the 2 decimal as the number is teminating like 10.6 so zero doont show even after use of round function 
+#  to solve this we use format function which allows us to change the display format 
+print( "Each person should pay :  ₹" + str("{:.2f}".format(round(z,3))))
+print( "Each person should pay :  ₹" + str("{:.2f}".format(z)))
+# doesnt need round function if we use format to print decimal places 
