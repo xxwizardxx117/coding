@@ -1,0 +1,8 @@
+# Code below this line 👇
+
+print ("Welcome to Bill Splitter")
+totalbill = input ("What was your total Bill Amount ?\n")
+Tip = input ("What percentage of Tip would you like to give ?\n ")
+people = input ("Number of people to split bill among \n")
+z = float(totalbill)/int(people)  * (1+(float(Tip)/100))
+print( "Each person should pay : " + str(round(z,2)))
