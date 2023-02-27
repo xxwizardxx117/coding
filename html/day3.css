@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:  #3F0071 ;
+    padding: 200px;
+}
+@media (max-width: 480px) 
+    /* here above means that below the above mentioned pixel width the site will have yellow colour */
+/* it needs to be applied before the below min width as if we add it over them it doesnt work */
+{
+    body {
+        background-color: #F7EC09;
+    }
+}
+
+@media (min-width: 768px) 
+    /* here above means that after above mentioned pixel width the site will have pink colour*/
+{
+    body {
+        background-color: #FB2576;
+    }
+}
+
+@media (min-width: 1024px)  
+    /* here above means that after above mentioned pixel width the site will have blue colour*/
+{
+    body {
+        background-color: #332FD0;
+    }
+}
+@media (min-width: 1280px) 
+    /* here above means that after  above mentioned pixel width the site will have green colour*/
+{
+    body {
+        background-color: #82CD47;
+    }
+}
+
+
+.parent {
+    background-color: 170055;
+    width: 100%;
+    height: 700px ;
+    display: flex;/* used to arrange the boxes in row from coloum which is default style */
+    gap: 5px;/* gap is same as margin but works in flex and is better */
+    flex-wrap: wrap;/* after using the above we see that the childs gets arranged in rows and when the width of the parent becomes less they move to the next row HERE child maintain there width and height*/
+    /* by default the childs come from left to right in browser in parent class */
+    /* to change the alignment of chlid we use the below to set the alignment */
+    /* the alignment set by the justify content applies to all the content present in the parent and same properties are applied to all child*/
+    justify-content: flex-end;
+    /* changes alignment of the child to right side on horizontal axis while default arrangement , when we define direction to colum it changes according to the vertical axis*/
+    justify-content: center;
+    /* the above brings the childs to center */
+    justify-content: space-between;
+    /*aligns the childs one row on right and other row to left */
+    justify-content: space-around;
+    /*aligns the childs with each row from space between in a manner where space is left unevenly to right and left of the child rows (for column approach changes to vertical top and bottom) */
+    justify-content: space-evenly;
+    /* aligns the space in space around evenly meaninh the space created in between on right and left are equal */
+
+
+
+    /* to apply the alignment only to the single child according to size of the child in the parent we use the align-items: tag*/
+    /* here each child gets alligned according to its own height but tag gets applied to all childs  as can be used in parent class*/
+    /* this doesnt mean that they are alligned into center of the parent, it means that they are alligned wrt to vertical axis alligned to center according to respective height from left to right */
+    align-items: center;
+    align-items: baseline;
+    /* arranges items according to height from base line so the down side edge of each element is at same level and is according to it  */
+    align-items: flex-end;
+    /* the above command arranges each element at the end of parent space at the given distance(bottom acts as base line) */
+
+
+
+    flex-direction: column;
+    /* changes the flex normal row pattern to column one (by default child get arranged from left to right & as scale changes go into next row)*/
+    /* the above command make the child go from top to bottom and then according to the scale brings the extra childs into next column  */
+
+
+
+}
+.child {
+    background-color: aquamarine;
+    width: 200px;
+    height: 200px;
+}
+
+.child2 {
+    background-color: #FF9300;
+    width: 200px;
+    height: 80px;
+}
+
+
+
+
+

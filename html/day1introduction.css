@@ -1,0 +1,45 @@
+.firstclass {
+    /* for style we use dot (.) */
+    background-color: #E90064;
+    /* to get more colour options in css we can go to colorhunt.co */
+    color: #FCE22A;
+    /* the above refers to text colour */
+}
+
+/* using of class style is prefered as good practice  */
+/* as styling a class only affect the designated area (selected div) and as per requirement we can reuse the class */
+/* as we can assingn same class name to some other division rather making a new class for it */
+
+
+
+
+/* ID selector */
+#my-id {
+    background-color: #5D3891;
+    color: #F5F5F5;
+}
+
+/* for id we use hash(#) */
+/* id can be used only once for a particular division */
+/* ids are not good to use  */
+
+
+
+
+
+/* element selector */
+/* to define element we directly write the tag name and design it  */
+p {
+    background-color: #FFD4D4;
+    color: #F55050;
+}
+
+
+h1 {
+    color: aqua;
+    /* earlier the colour of h1 was yellow */
+    /* here if we edit the h1 colour it takes effect over the class and changes the class colour  */
+    /* as the element selector defines a element and the element wherever iused will change  */
+    /* hence try to avoid the id , element selector (can be used in home page) */
+}
+

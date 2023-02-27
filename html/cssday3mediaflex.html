@@ -1,0 +1,71 @@
+<!DOCTYPE html height 100%>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--meta is used to use media querry  -->
+    <!-- viewport means that the entire screen must be visible and here media querry is to be applied -->
+    <!-- width = device width means that we are comparing or scaling with respect to device width whichever we use -->
+    <!-- initial scale zero means that initial (default) zoom level is 100 -->
+    <link rel="stylesheet" href="day3.css" />
+    <title>Media Querry & Flex</title>
+  </head>
+  <!-- 
+    min width for some devices
+    tablet - 768px
+    laptop -1024px
+    pc- 1280px -->
+  <!-- Mobile first approach -mobile first other devices later is followed -->
+
+  <!-- Flex Box -->
+  <!-- the flex container is where the flex box gets applied  -->
+  <!-- Itens present in it are called flex items-->
+  <!-- flex box uses parent child relation ship  -->
+  <!-- alignment inside flex container happens from left to right on main axis (horizontal one ) -->
+  <!-- alignment happens fron top to bottom on cross axis (vertical axis) -->
+
+  <body>
+    <!-- media querry and flex box refers to the responsiveness of website with respect to different devices -->
+    <h1>Flex Box</h1>
+    <br />
+    <br />
+    <br />
+
+    <center><img src="flexbox diagram.png" width="500" height=" 400" /></center>
+    <p>
+      <strong>Flex Box --></strong><br /><i>
+        the flex container is where the flex box gets applied .<br />
+        Items present in it are called flex items.<br />
+        flex box uses parent child relation ship.<br />
+        alignment inside flex container happens from left to right on main axis
+        (horizontal one ).<br />
+        alignment happens fron top to bottom on cross axis (vertical axis).<br />
+      </i>
+    </p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="parent">
+      <div class="child">
+      </div>
+      <div class="child">
+      </div>
+      <div class="child">
+      </div>
+      <div class="child">
+      </div>
+      <div class="child">
+      </div>
+      <div class="child">
+      </div>
+      <div class="child2">
+      </div>
+      <!-- here child arrange themselves in a row (cross axis) this happens normally -->
+      <!-- to arrange them in coloum we use flex in parent -->
+      <!-- but after this still they have a issue as if number of childs increses they arrange themselves in same space (automatically decrease their width accordingly)not go to other row -->
+      <!-- to change this we will use another flex property in parent to make the change  -->
+    </div>
+  </body>
+</html>

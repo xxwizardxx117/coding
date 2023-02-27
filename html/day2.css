@@ -1,0 +1,83 @@
+*{
+    /* star is used to change the default browser settings  */
+    margin:  0;
+    padding: 0;
+    
+}
+
+
+
+
+
+
+.firstclass {
+    /* for style we use dot (.) */
+    background-color: #E90064;
+    /* to get more colour options in css we can go to colorhunt.co */
+    color: #FCE22A;
+    /* the above refers to text colour */
+    padding-left: 450px;
+    padding-right: 20px;
+    /* padding right doesnt get applied as it is a division(block tag) so whole space gets allocated  */
+    /* we can overwrite it using CSS by changeing default setting of the browser */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 2%;
+    /* pecentage is taken from the browser display width and scales accordingly while pixels is a fixed value that doesnt change with respect to width */
+    /* we can write above one line instead of: */
+    /* margin-right: 20px ;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px; */
+    /* as all marginn values are same */
+    display: none;
+    /* used to hide the whole class that we have made  */
+    /* it is used to  hide things in particular devices as in mobiles we cant show certain things like pc and vice versa it is used together with media querry (scaling thing for android)*/
+    display: block;
+    /* it shows the above hidden thing  */
+}
+
+
+/* CSS bock model */
+/* padding is space around the text which is waste .
+    the space if looked from the browser point then the border are called margins (space between division and the browser) */
+
+
+    .parent {
+        position: relative;
+        /* used to make the parent default with respect to child  */
+        background-color: #0F6292 ;
+        width: 100%;
+        height: 300px;
+    }
+    .child {
+
+        display: inline-block;
+        /* this command is used to solve the problem mentioned in the comment below */
+        /* it arranges the childs into a row (left to right) */
+        /* they ajust happens themselves in different rows */
+        /* hence we make the block element behave like a inline element */
+
+
+
+
+        background-color: #16FF00;
+        width: 100px;
+        height: 100px;
+        margin:0.19%;
+        /* here if we use the above as follow  we get a column of boxes going downwards no in a horizontal manner or one after the other rows*/
+        /* this happens as it is a block element */
+
+
+
+        position: absolute;
+        top: 0;
+        right :0;
+    /* used to specifiy the position of the child element */
+    /* using above command all child move to top tight corner and move out of the parent division  */
+    /* as the parent division is not the default division,( the brower is default division )  */
+    /* to make changes to stay within the parent division we need to make it default (we do it by makeing parent as position relative) */
+    /* after making position relative we see that only single child shows up but we had multiple childs */
+    /*(this happens because of the childs getting overlapped as they all belonged to same class and same position was specified to all*/
+    /* so for multiple child we need to make multiple classes to be specific about there positions  */
+}
