@@ -1,2 +1,0 @@
-# coding
-Daily Basis Things
