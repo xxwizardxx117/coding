@@ -1,0 +1,101 @@
+/* removing browser default padding and margin */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* making a default style for the bdy*/
+body {
+    font-family: 'Merriweather', serif;
+    background: #F9FAFC;
+}
+
+
+/* creating the navigation bar  */
+.navbar {
+    display: flex;
+    /* adding the flex properties as it is the parent and stores all the elements */
+    align-items: center;
+    /* used to align items(all the options that are in navigation bar) to the center */
+    justify-content: space-around;
+    /* we use space around as we dont want the things(items present in the navigation bar) to stick to the margins rather leave a certain space around for the border so we use the space around command */
+    
+}
+
+
+/* to sacale the company logo division */
+.navbar_company {
+    width: 100px;
+    /* here we are specifing the size of the division used for logo */
+}
+
+
+
+/* making image display at 100% in division */
+.navbar_logo {
+width: 100%;
+/* here we made sure that the image scales with 100 percent of the above made division size without changing any properties of the image */
+}
+
+
+
+/* designing the button as it is the only nav item  */
+.nav_item {
+    background-image: linear-gradient(
+        /* it means to apply multiple colour shuld get applied */
+        /* it has 2 parameters 1.direction (specifies from which direction the colour should be applied from) , 2. gradient colour */
+        to right,#ff512f 0%,#dd2476 51%,#ff512f 100%
+        /* the percentages used are the place upto wich percent the colour should be applied */
+    );
+    color: #fff;
+    /* text colur */
+    border: none;
+    /* removes border from the button */
+    padding:12px;
+    /* add a space between the border and the text */
+    border-radius: 6px;
+    /* adds the curved edges to the border */
+}
+
+
+
+/* adding hover effect to the button */
+.nav_item:hover {
+/* here :hover means that we want to apply a hover effect with the following probperties and the properties are written in between {} */
+    border: 2px solid #E90064;
+    /* the effect below is not supported in brave browser */
+    background-position: right center;
+    /* the colour change happens from right to center */
+    cursor: pointer;
+    /* the above command changes the mouse pointer to the hand symbol */
+}
+
+
+/* appling media querry according to the tablet */
+@media (min-width : 768px) {
+    /* desingning nav bar when the size reaches the above mentioned width */
+    .navbar {
+        justify-content: space-between;
+        /* creating a space between the logo and the items */
+        padding: 10px 30px;
+        /* giving more space between the button margin and the text */
+    }
+}
+
+
+/* appling media querry according to the desktop */
+@media(min-width:1024px){
+    /* desingning nav bar companylogo and the button when the size reaches the above mentioned width (desktop size) */
+    .navbar_company {
+        width: 150px;
+    }
+    .nav_item {
+        padding: 20px;
+        /* giving more space between the button margin and the text */
+        font-size: 20px;
+        /* as the display size increased the zomato button text was same so we specified a special font size when width is 1024 */
+        font-weight: 600;
+        /* our text in button was not looking good as it was not bold */
+    }
+}

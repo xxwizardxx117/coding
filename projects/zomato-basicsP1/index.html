@@ -2,11 +2,30 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- we linked the css sheet  -->
     <title>Zomato</title>
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <div class="navbar_company">
+                <!-- here we specify the height & width of the div because image has its own size and if we resize it we may face size issues -->
+                <!-- the above help us aviod issues as we make a division of required size and then scale image as full (100%) in it -->
+                <img src="assets/logo.png" alt="logo" class="navbar_logo">
+                <!-- alt shows the text in case the image fails to load or has an error -->
+                <!-- here we gave image a class name so that instead of resizing image using the html we can use css and make it more readable -->
+            </div>
+
+            <div class="navbar_nav_items">
+                <!-- we use button tag to make buttton -->
+                <button class="nav_item">Order Food</button>
+            </div>
+        </nav>
+
+    </header>
 </body>
 </html>
