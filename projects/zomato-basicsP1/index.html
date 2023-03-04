@@ -10,8 +10,16 @@
     <title>Zomato</title>
 </head>
 <body>
+
+
+
+
+
+
+
     <header>
         <nav class="navbar">
+
             <div class="navbar_company">
                 <!-- here we specify the height & width of the div because image has its own size and if we resize it we may face size issues -->
                 <!-- the above help us aviod issues as we make a division of required size and then scale image as full (100%) in it -->
@@ -22,10 +30,50 @@
 
             <div class="navbar_nav_items">
                 <!-- we use button tag to make buttton -->
-                <button class="nav_item">Order Food</button>
+                <button class="nav_item button_primary">Order Food</button>
             </div>
-        </nav>
 
+        </nav>
     </header>
+
+
+
+
+
+
+
+
+    <main class="container">
+        <!-- we use the container class so as to make a margin (padding) throught the web page (here it creates a margine and padding for the main division)-->
+        <!-- It is a part of boot strap -->
+        <!-- Hero Section -->
+        <section class="hero_container">
+<!-- here we make a section for our work -->
+            <div class="hero_image_container">
+                <!-- we make a division for image in the section(container) -->
+                <img src="assets/hero.jpg" alt="hero image" class="hero_image">
+                <!-- we add the image in the required space with a class to do further modifications -->
+            </div>
+
+            <div class="hero_discription">
+                <!-- we create another division out of container so as to give the text that we want to be written and give division a class name -->
+                <h1 class="hero_text">
+                    <!-- we right the text that we want and give that a class name for modification -->
+                    Order food from favourite resturaunts near you.
+                </h1>
+                <button class="button_primary">
+                    <!-- here we are using the same class name which is not a good practice so we will make the name as global item-->
+                    Order now
+                </button>
+            </div>
+            
+        </section>
+    </main>
+
+
+
+
+
+
 </body>
 </html>

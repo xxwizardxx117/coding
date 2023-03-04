@@ -1,15 +1,23 @@
 /* removing browser default padding and margin */
 *{
     margin: 0;
+    /* it is  extra space that we want to leave around the thing that we have */
+    /* it is scaling after making the object fixed  */
     padding: 0;
+    /* it is scaling after making the margine fixed  */
 }
 
 
 /* making a default style for the bdy*/
 body {
     font-family: 'Merriweather', serif;
-    background: #F9FAFC;
+    background: #ebf2ff;
 }
+
+
+
+/* navigation bar */
+
 
 
 /* creating the navigation bar  */
@@ -20,7 +28,8 @@ body {
     /* used to align items(all the options that are in navigation bar) to the center */
     justify-content: space-around;
     /* we use space around as we dont want the things(items present in the navigation bar) to stick to the margins rather leave a certain space around for the border so we use the space around command */
-    
+    background-color: #fff;
+    /* we add the background colour to the navigation bar  */
 }
 
 
@@ -29,8 +38,6 @@ body {
     width: 100px;
     /* here we are specifing the size of the division used for logo */
 }
-
-
 
 /* making image display at 100% in division */
 .navbar_logo {
@@ -41,7 +48,7 @@ width: 100%;
 
 
 /* designing the button as it is the only nav item  */
-.nav_item {
+.button_primary {
     background-image: linear-gradient(
         /* it means to apply multiple colour shuld get applied */
         /* it has 2 parameters 1.direction (specifies from which direction the colour should be applied from) , 2. gradient colour */
@@ -52,16 +59,14 @@ width: 100%;
     /* text colur */
     border: none;
     /* removes border from the button */
-    padding:12px;
+    padding:13px;
     /* add a space between the border and the text */
     border-radius: 6px;
     /* adds the curved edges to the border */
 }
 
-
-
 /* adding hover effect to the button */
-.nav_item:hover {
+.button_primary:hover {
 /* here :hover means that we want to apply a hover effect with the following probperties and the properties are written in between {} */
     border: 2px solid #E90064;
     /* the effect below is not supported in brave browser */
@@ -70,6 +75,54 @@ width: 100%;
     cursor: pointer;
     /* the above command changes the mouse pointer to the hand symbol */
 }
+
+
+
+
+
+/* main section */
+
+
+
+
+.container {
+    /* we use the container class so as to make a margin (padding) throught the web page */
+    max-width: 100%;
+    padding:20px;
+    /* we add the above */
+    margin: 0 auto;
+    /* the above set the top and bottom margine to 0 and left and right to auto */
+}
+
+
+.hero_image_container {
+    width: 100%;
+}
+
+.hero_image {
+    width: 100%;
+    border-radius: 8px;
+    /* adds the curved edges to the border */
+    box-shadow:0px 25px 50px -12px rgb(0, 0, 0, 0.25);
+    /* top right bottom left / opacity  hex code for box shadow*/
+}
+
+.hero_text {
+    font-weight:800;
+    font-size: 30px;
+    margin: 20px 0px;
+    color: #1d3557;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* appling media querry according to the tablet */
@@ -81,16 +134,33 @@ width: 100%;
         padding: 10px 30px;
         /* giving more space between the button margin and the text */
     }
+    .hero_container {
+        margin: 20px;
+        display: flex ;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
 }
 
 
+
+
+
+
+
+
 /* appling media querry according to the desktop */
-@media(min-width:1024px){
+@media (min-width:1024px){
+    /* here container is specifing the size that it should of when the width is of 1024  */
+    /* when the width reaches 1024 side margin get added to reduce the container size to 60% */
+    .container {
+        max-width: 70%;
+    }
     /* desingning nav bar companylogo and the button when the size reaches the above mentioned width (desktop size) */
     .navbar_company {
         width: 150px;
     }
-    .nav_item {
+    .button_primary {
         padding: 20px;
         /* giving more space between the button margin and the text */
         font-size: 20px;
@@ -98,4 +168,20 @@ width: 100%;
         font-weight: 600;
         /* our text in button was not looking good as it was not bold */
     }
+    .hero_discription {
+        width: 100%;
+    }
+    .hero_text {
+        font-size: 50px;
+    }
 }
+
+
+
+
+
+
+
+
+
+
