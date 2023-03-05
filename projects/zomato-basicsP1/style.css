@@ -84,30 +84,36 @@ width: 100%;
 
 
 
-
+/* container is the big box which will have everything then we have another section(hero container) section is divided into 2 division (hero_image_container and hero_discription) */
 .container {
     /* we use the container class so as to make a margin (padding) throught the web page */
     max-width: 100%;
+    /* here the max width symbolizes that below and till 100% container should scale accordingly to the width */
     padding:20px;
-    /* we add the above */
+    /* we add the above distace between the container and the  */
     margin: 0 auto;
     /* the above set the top and bottom margine to 0 and left and right to auto */
 }
 
 
 .hero_image_container {
+    /* it is the division containing the image */
     width: 100%;
+    /* scales the image according to the width */
 }
 
 .hero_image {
+    /* it is the image */
     width: 100%;
+    /* scale the image upto 100% of the hero image container  */
     border-radius: 8px;
-    /* adds the curved edges to the border */
+    /* adds the curved edges to the border of the image */
     box-shadow:0px 25px 50px -12px rgb(0, 0, 0, 0.25);
     /* top right bottom left / opacity  hex code for box shadow*/
 }
 
 .hero_text {
+    /* it is the text specifications */
     font-weight:800;
     font-size: 30px;
     margin: 20px 0px;
@@ -170,9 +176,11 @@ width: 100%;
     }
     .hero_discription {
         width: 100%;
+        /* scales the discription in the section in the according to the width and makes it compete for equal space with the image when scale is above 1023 */
     }
     .hero_text {
         font-size: 50px;
+        /* increase the text size to 50 after 1023 */
     }
 }
 
