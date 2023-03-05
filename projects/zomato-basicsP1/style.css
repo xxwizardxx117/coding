@@ -16,9 +16,10 @@ body {
 
 
 
+
+
+
 /* navigation bar */
-
-
 
 /* creating the navigation bar  */
 .navbar {
@@ -32,7 +33,6 @@ body {
     /* we add the background colour to the navigation bar  */
 }
 
-
 /* to sacale the company logo division */
 .navbar_company {
     width: 100px;
@@ -44,7 +44,6 @@ body {
 width: 100%;
 /* here we made sure that the image scales with 100 percent of the above made division size without changing any properties of the image */
 }
-
 
 
 /* designing the button as it is the only nav item  */
@@ -80,9 +79,10 @@ width: 100%;
 
 
 
+
+
+
 /* main section */
-
-
 
 /* container is the big box which will have everything then we have another section(hero container) section is divided into 2 division (hero_image_container and hero_discription) */
 .container {
@@ -126,6 +126,35 @@ width: 100%;
 
 
 
+/* explorer menu */
+.explore_menu_text {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    color: #1d3557;
+}
+.food_card {
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+.food_card_image_container {
+    width: 100%;
+}
+.food_image {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    /* we want to apply the border radius to only the uper vertexes so we right the values like above */
+    /* the format is top left, top right, right bottom, left bottom */
+
+}
+.food_card_discription {
+    padding: 15px;
+}
+
+
+
 
 
 
@@ -142,9 +171,51 @@ width: 100%;
     }
     .hero_container {
         margin: 20px;
+        padding-bottom: 100px;
         display: flex ;
         flex-direction: row-reverse;
         align-items: center;
+    }
+
+
+    /* EXPLORE MENU TABLET VIEW SETTINGS */
+    .explore_menu_background_gradient {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -3;
+        background-image: linear-gradient(
+            /* it means to apply multiple colour shuld get applied */
+            /* it has 2 parameters 1.direction (specifies from which direction the colour should be applied from) , 2. gradient colour */
+            to right,#ff512f 0%,   #dd2476 51%,   #ff512f 100%
+            /* the percentages used are the place upto wich percent the colour should be applied */
+        );
+        transform: skewY(-7deg) ; 
+            /*transform is a property used for changing shape according to the x and y axix */
+            /* skewY is used to configure the y dimension */
+    }
+
+    .explore_menu_container {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .explore_menu_lists {
+        margin-top: 60px;
+        /* padding-top: 20px ; */
+        display: flex;
+        gap:15px;
+        padding: 0 30px ;
+        padding-bottom: 10%;
+    }
+    #pizza {
+        margin-top: -20px;
+        margin-bottom: 25px;
+        /* we apply the minus sign so as to decrease the margin that was there */
+        /* we apply the normal positive margie so as to increase the margine in the the specific area where the pizza card is present  */
+
     }
 }
 
@@ -181,6 +252,19 @@ width: 100%;
     .hero_text {
         font-size: 50px;
         /* increase the text size to 50 after 1023 */
+    }
+
+
+
+
+/* EXPLORE MENU PC VIEW SETTINGS */
+    .explore_menu_text {
+        font-size: 48px;
+    }
+    .explore_menu_lists {
+        
+        gap: 30px;
+        padding-bottom: 10%;
     }
 }
 
