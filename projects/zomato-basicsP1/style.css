@@ -91,7 +91,7 @@ width: 100%;
     /* here the max width symbolizes that below and till 100% container should scale accordingly to the width */
     padding:20px;
     /* we add the above distace between the container and the  */
-    margin: 0 auto;
+    margin: 0 auto;     
     /* the above set the top and bottom margine to 0 and left and right to auto */
 }
 
@@ -206,10 +206,54 @@ width: 100%;
     text-align: center;
     /* aligning text to center according to the words  */
     color: #ffffff;
+    font-size: 18.72px;
+    font-weight: 650;
 }
 
 
 
+
+
+/* Site  footer */
+
+.end_container {
+    width: 100%;
+    border-radius:  12px 12px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* divides the space equally between the divisions */
+    justify-items: center;
+    /* used to arrange items in a line one below or across */
+    align-items: center;
+    /* used to bring items to center of the page */
+    background-image: linear-gradient(
+        /* it means to apply multiple colour shuld get applied */
+        /* it has 2 parameters 1.direction (specifies from which direction the colour should be applied from) , 2. gradient colour */
+        to right,#ff512f 0%,   #dd2476 51%,   #ff512f 100%
+        /* the percentages used are the place upto wich percent the colour should be applied */
+    );
+}
+.footer_image_container {
+    max-width: 100%;
+}
+.footer_image{
+    width: 100%;
+    filter: brightness(0) invert(1);
+    /* the above code reverses the logo colour */
+}
+
+.table {
+color: #fff;
+padding-bottom: 23px;
+}
+
+
+
+li {
+    margin: 5px 0;
+    list-style: none;
+}
 
 
 
@@ -233,8 +277,10 @@ width: 100%;
     }
 
 
+
     /* EXPLORE MENU TABLET VIEW SETTINGS */
     .explore_menu_background_gradient {
+        padding: 25px 0;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -251,12 +297,10 @@ width: 100%;
             /*transform is a property used for changing shape according to the x and y axix */
             /* skewY is used to configure the y dimension */
     }
-
     .explore_menu_container {
         position: relative;
         z-index: 1;
     }
-    
     .explore_menu_lists {
         margin-top: 60px;
         /* adds a margine from the top */
@@ -278,8 +322,10 @@ width: 100%;
         margin-bottom: 25px;
         /* we apply the minus sign so as to decrease the margin that was there */
         /* we apply the normal positive margie so as to increase the margine in the the specific area where the pizza card is present  */
-
     }
+
+
+
 
     /* QUOTE ROW TABLET VIEW SETTINGS */
     .quote_container {
@@ -293,9 +339,14 @@ width: 100%;
         /* adding boldness */
         font-size: xx-large;
     }
+
+
+
+    /* Site  footer */
+
+.end_container {
+    flex-direction: row;
 }
-
-
 
 
 
@@ -307,7 +358,7 @@ width: 100%;
     /* here container is specifing the size that it should of when the width is of 1024  */
     /* when the width reaches 1024 side margin get added to reduce the container size to 60% */
     .container {
-        max-width: 70%;
+        width: 70%;
     }
     /* desingning nav bar companylogo and the button when the size reaches the above mentioned width (desktop size) */
     .navbar_company {
@@ -345,4 +396,5 @@ width: 100%;
     .quote_text{
         font-size: 38px;
     }
+}
 }
