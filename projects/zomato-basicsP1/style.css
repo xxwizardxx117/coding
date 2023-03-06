@@ -11,7 +11,7 @@
 /* making a default style for the bdy*/
 body {
     font-family: 'Merriweather', serif;
-    background: #ebf2ff;
+    background: #d3dff7;
 }
 
 
@@ -136,10 +136,13 @@ width: 100%;
     color: #1d3557;
 }
 .food_card {
-    background-color: #ffffff;
+    background-color: rgb(216, 228, 246);
     border-radius: 8px;
+    box-shadow:0px 25px 50px -12px rgb(0, 0, 0, 0.25);
+    /* top right bottom left / opacity  hex code for box shadow*/
 }
 .food_card_image_container {
+    margin-top: 20px;
     width: 100%;
 }
 .food_image {
@@ -160,6 +163,56 @@ width: 100%;
 
 
 
+/* quote container */
+
+
+
+
+.quote_container {
+    position :relative;
+    /* align-items: center; */
+    width: 100%;
+    height: 200px;
+    border-radius: 15px; 
+    display: flex;
+    /* we use flex here */
+    flex-direction: column;
+    /* added flex direction */
+    justify-content:center;
+    /* flex content should scale from center */
+    background: url(assets/quote\ colum\ img.webp) center center / cover no-repeat;
+    /* used to add the image via css into the container , center reperesents that the image should start scaling from center */
+    box-shadow:0px 25px 50px -12px rgb(0, 0, 0, 0.25);
+    /* top right bottom left / opacity  hex code for box shadow*/
+}
+
+.quote_image_bgcover {
+    position: absolute;
+    /* setting the bg cover as absolute */
+    height: 200px;
+    width: 100%;
+    border-radius: 15px; 
+    background-color: #0a4065;
+    opacity: 49%;
+    /* controlls the opacity of the thing  */ 
+}
+
+.quote_text {
+    margin: 0 5px;
+    position: relative;
+    /* adding the text relative to the bg cover */
+    z-index:3; 
+    /* adding text over the cover */
+    text-align: center;
+    /* aligning text to center according to the words  */
+    color: #ffffff;
+}
+
+
+
+
+
+
 /* appling media querry according to the tablet */
 @media (min-width : 768px) {
     /* desingning nav bar when the size reaches the above mentioned width */
@@ -174,7 +227,9 @@ width: 100%;
         padding-bottom: 100px;
         display: flex ;
         flex-direction: row-reverse;
+        /* reverss the position of image and the text in tablet an pc view */
         align-items: center;
+        /* brings both the tect and the image center lie on the same line and bloom from that outwards  */
     }
 
 
@@ -204,18 +259,39 @@ width: 100%;
     
     .explore_menu_lists {
         margin-top: 60px;
+        /* adds a margine from the top */
         /* padding-top: 20px ; */
         display: flex;
         gap:15px;
+        /* adds a gap in between the food cards */
         padding: 0 30px ;
+        /* provde the side padding in the exploremenu */
         padding-bottom: 10%;
+        /* provides the bottom padding which is resizeable according to the width of container */
+    }
+    .food_card_image_container {
+        margin-top: 0px;
     }
     #pizza {
+        /* this is how we use a id (id  can override the predefined css for a particular instance) */
         margin-top: -20px;
         margin-bottom: 25px;
         /* we apply the minus sign so as to decrease the margin that was there */
         /* we apply the normal positive margie so as to increase the margine in the the specific area where the pizza card is present  */
 
+    }
+
+    /* QUOTE ROW TABLET VIEW SETTINGS */
+    .quote_container {
+        height: 300px;
+    }
+    .quote_image_bgcover {
+        height: 300px;
+    }
+    .quote_text {
+        font-weight: 500;
+        /* adding boldness */
+        font-size: xx-large;
     }
 }
 
@@ -266,14 +342,7 @@ width: 100%;
         gap: 30px;
         padding-bottom: 10%;
     }
+    .quote_text{
+        font-size: 38px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
