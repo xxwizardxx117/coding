@@ -1,0 +1,110 @@
+.transform {
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+    background-color: aqua;
+}
+.transform:hover {
+    /* this means that when the div is hovered over the background color of the div should change to red */
+    background-color: red;
+    width: 250px;
+    height: 250px;
+    transition: all; /*how the transition should be applied to the div is decided by this property */
+    /***values to which thing the transition should apply to /
+    /*  transition-property: width;                            this means that the transition should only be applied to the width of the div
+        transition-property: height;                           this means that the transition should only be applied to the height of the div    
+        transition-property: background-color;                 this means that the transition should only be applied to the background-color of the div
+        transition-property: width, height;                    this means that the transition should only be applied to the width and height of the div
+        transition-property: width, height, background-color;  this means that the transition should only be applied to the width, height and background-color of the div
+        transition-property: all;                              this means that the transition should be applied to all the properties of the div */
+
+    /***values of when the transition should start  */
+    transition-delay: 0ms;     /* transition-delay: 1s;  this means that the transition should start after 1 second */
+
+    /***values of how long the transition should take  */
+    transition-duration: 0.5s; /* transition-duration: 1s;  this means that the transition should take 1 second to complete */
+
+
+    /***values of how transition should happen  */
+    /* transition-timing-function: ease-in;                           this means that the transition should start slow and end fast */
+    /* transition-timing-function: ease-out;                          this means that the transition should start fast and end slow */
+    /* transition-timing-function: ease-in-out;                       this means that the transition should start slow, end fast and then slow again */
+    /* transition-timing-function: linear;                            this means that the transition should start slow, end fast and then slow again */
+    /* transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);  this means that the transition should start slow, end fast and then slow again */
+    /* transition-timing-function: steps(10, end);                    this means that the transition should start slow, end fast and then slow again */
+    /* transition-timing-function: frames(10);                        this means that the transition should start slow, end fast and then slow again */
+    /* transition-timing-function: jump-start;                        this means that the transition should start slow, end fast and then slow again */
+    /* transition-timing-function: jump-end;                          this means that the transition should start slow, end fast and then slow again */
+    /******values all together */
+    /* transition:all 0.5s;  this is an easy way to add the above 2 code lines in single step */
+    /* transition:all 0.5s ease-in;  this is an easy way to add the above 2 code lines in single step and also add the transition timing function */
+    /* transition:all 0.5s ease-in-out;  this is an easy way to add the above 2 code lines in single step and also add the transition timing function */
+    /* transition:all 0.5s ease-out;  this is an easy way to add the above 2 code lines in single step and also add the transition timing function */
+    /* transition:all 0.5s linear;  this is an easy way to add the above 2 code lines in single step and also add the transition timing function */
+
+    border-radius: 50%; /* this means that the div should have a border radius of 50% */
+    transform: rotate(180deg); /* this means that the div should rotate 180 degrees */ 
+    /* here we can use content tag to write on the object */
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+                                /* *****animation***** */
+
+.box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    animation: 10s abc infinite ;    /* this means that the animation named abc should take 10 seconds to complete should be infinitly looped */
+    /* animation-duration: 4s;              this means that the animation should take 4 seconds to complete */
+    /* animation-name: example;             this means that the animation should be applied to the box class  */
+    /* animation-iteration-count:infinite;  this means that the animation should repeat infinite times */
+    animation-delay: 2s;                 /* this means that the animation should start after 2 seconds  */
+    
+}
+
+
+/* in animation we use keyframes to define the animation */
+/* we cant do big animation here in css on itself normal css can be used to do one specific animation  */
+/* so key frames allow us to do animation at begining middle and end of transitions */
+/* to discrbe an animation we use the keyframes tag  and then specify the animation name */
+@keyframes abc {
+/* here the things in key frame will be applied to bo class for the specified time duration */
+20% {
+    /* the percentage specifies the duration for which the animation should get applied for */
+    background-color: red;
+    marrgine-left: 500px;
+}
+
+50% {
+    background-color: blue;
+    margin-left: 500px;
+    transform: rotate(40deg);
+    border-radius: 50px;
+}
+/* ** look from boxes prospective ** */
+/* the animation goes and comes back to its position as here the orginal position is the right corner the box moves 500px to left (that is 50%) */
+/* as it reaches 500px it changes color and rotates along with border change , after that as no other frame is specified between 50 -100 it goes back to orignal state */
+}
+
+
+
+
+
+/* 
+    animation-direction: alternate; /* this means that the animation should alternate between the keyframes 
+    animation-timing-function: ease-in-out; /* this means that the animation should start slow, end fast and then slow again 
+    animation-play-state: paused; /* this means that the animation should start after 2 seconds 
+    animation-fill-mode: forwards; /* this means that the animation should start after 2 seconds 
+*/
+
