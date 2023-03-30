@@ -1,0 +1,28 @@
+/* pseudo classes (hover used to give a movement button an animation) so 
+pseudo classes are effects that change or apply to state of an element
+they have pre defined code behind the sene and just bring the effect of that code to our code  */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* SOME OF THE PRE BUILD CLASSES(PSEUDO-CLASSES) ARE */
+a:link {
+    /* it remains same it means that when links have not been visited the links should be green */
+    color: green;
+}
+a:visited {
+    /* it means that when links that have been visited should be red in  colour */
+    color: red;
+}
+a:active{
+    /* it is used to change the colour of the link when it is KEPT clicked */
+    color: blue;
+}
+
+a:hover{
+    /* it is used to change the colour of the link when it is HOVERED over */
+    color: purple;
+}
