@@ -1,0 +1,69 @@
+/* pseudo classes (hover used to give a movement button an animation) so 
+pseudo classes are effects that change or apply to state of an element
+they have pre defined code behind the sene and just bring the effect of that code to our code  */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* SOME OF THE PRE BUILD CLASSES(PSEUDO-CLASSES) ARE */
+a:link {
+    /* it remains same it means that when links have not been visited the links should be green */
+    color: green;
+}
+a:visited {
+    /* it means that when links that have been visited should be red in  colour */
+    color: rgb(68, 0, 255);
+}
+a:active{
+    /* it is used to change the colour of the link when it is KEPT clicked */
+    color: rgb(244, 248, 8);
+}
+
+a:hover{
+    /* it is used to change the colour of the link when it is HOVERED over */
+    color: purple;
+}
+
+/* we can also use pseudo classes to select elements */
+
+.container p:first-child {
+    /* this means that for container class give paragraph tag color red , p should be the first child of the container class child  or the container itself*/
+    /* also applies to element(child of the immidiate child) of parent child(immidiate child) of the mentioned class with a paragraph tag as 1st child*/ 
+    color: red;
+}
+.container p:last-child {
+    /* this means that for container class give paragraph tag color red , p should be the last child(sub child or element or child of imidiate child) of the container class child(immidiate child) */
+    /* applies to element(child of the immidiate child) of parent child (immidiate child) of the mentioned class with a paragraph tag as last child*/ 
+    color: red;
+}
+
+.container p:nth-child(2) {
+    /* this pseduo class allows us to select the required element as per our choice */
+    /* we enter the number of the position at which the required element should be at */
+    /* above means that in container class in childs the second element sub child colour should be red  */
+    color: red;
+}
+
+.container2 p:nth-child(even) {
+    /* the above can also be done by writing nth-child (odd) or (2n) or (2n+1)*/
+    color: blue;
+    /* here we see that all the even child of the container 2 division become blue in color */
+    /* this psudo class is helpfull as it reduces the code required to do the same with help of changing color one by one or using ids  */
+
+}
+
+.container3 p::before{
+        content :" hi everyone ";
+        background-color: aqua;
+        color: red;
+}
+
+.container3 p::after{
+    content :" thank you ";
+    background-color: black;
+    color: green;
+
+}

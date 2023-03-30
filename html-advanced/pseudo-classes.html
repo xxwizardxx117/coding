@@ -13,6 +13,7 @@
     <!-- '#' is used to make hyperlink when we dont have any hyper link to give -->
     <br>
     <a href="##">Youtube</a>
+    <a href="####">Youtss</a>
     <br>
     <br>
     <!-- what do we know about links 
@@ -21,34 +22,102 @@
 
     <div class="container">
         <!-- here box 1, box 2 and container paragraph are immidiate child of the container class -->
+        <!-- /* we can also use pseudo classes to select elements */ -->
+        <!-- below we are doing so by using nth child pseudo class,first child pseudo class and last child pseudo class -->
+
+
+
+
+
+
         <div class="box1">
             <!-- h3 and paragraphs are immidiate child of box 1 class -->
             <h3>Box 1 Heading</h3>
             <p>Box 1 paragraph 1</p>
+            <!-- it comes in red as is paragraph tag and is second child which fulfils the condition of css code for nth child (2) -->
+            <!-- same thing happens for box 1 also as unlike its first child second is a paragraph tag and is part of container as parent the colour is red -->
             <p>Box 1 paragraph 2</p>
             <p>Box 1 paragraph 3</p>
-            <p>Box 1 paragraph 4</p>
+            <p>Box 1 paragraph 4</p>                    <!--here it is the first child of container -->
             <p>Box 1 paragraph 5</p>
+            <!-- it comes in red as it is the last child (element) and has a paragaraph tag in the parent child (immidiate child) of container -->
         </div>
-<br>
-<br>
 
 
-        <p>container paragraph</p>
-        <p>container paragraph</p>
-<br>
-<br>
+
+
+
+
+
+        <p>container paragraph</p>                    <!-- here it is the second child of container-->
+        <!-- it comes in red as we specified in the nth child tag that if 2nd child is paragraph it should be red -->
+        <!-- here unlike other childs it is a direct second child of the container and is a paragaraph -->
+        <p>container paragraph</p>                    <!-- here it is the 3rd or 2nd last child of container-->
+
+
+
+
+
 
 
         <div class="box2">
-            <!-- h3 and box 2 are immidiate child of class box 2 -->
-            <h3>Box 2 Heading</h3>
+            <!-- paragraph tag  are immidiate child of class box 2 -->
+            
             <p>Box 2 paragraph 1</p>
+            <!-- here the above comes in red colour as it is the 1st child with paragraph tag of the immidiate child (box 2) of container class (parent) -->
+            <!-- box 1 has h3 as the first child hence the the code doesnt apply to it  -->
             <p>Box 2 paragraph 2</p>
-            <p>Box 2 paragraph 3</p>
+            <!-- here second element comes in red as in nth child css pseudo class we specified 2 as the element(sub child) to get red colour and here paragraph tag is a second element which fullfils the condition and the color is red-->
+            <!-- same thing happens for box 1 also as unlike its first child second is a paragraph tag and is part of container as parent the colour is red -->
+            <p>Box 2 paragraph 3</p>                  
+            <p>Box 1 paragraph 5</p>                 <!-- here it is the last or 4th child of container-->
             <p>Box 2 paragraph 4</p>
             <p>Box 2 paragraph 5</p>
+            <!-- it comes in red as it is the last child (element) and has a paragaraph tag in the parent child (immidiate child) of container -->
         </div>
+        
     </div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+    <div class="container2">
+        <!-- here we see why we use the psudo class to select element  -->
+            <p>Box 1 paragraph 3</p>                  
+            <p>Box 1 paragraph 5</p>                 
+            <p>Box 2 paragraph 4</p>
+            <p>Box 2 paragraph 5</p>
+            <p>Box 2 paragraph 3</p>                  
+            <p>Box 1 paragraph 5</p>                 
+            <p>Box 2 paragraph 4</p>
+            <p>Box 2 paragraph 5</p>
+            <p>Box 2 paragraph 3</p>                  
+            <p>Box 1 paragraph 5</p>                 
+            <p>Box 2 paragraph 4</p>
+            <p>Box 2 paragraph 5</p>
+            <p>Box 2 paragraph 3</p>                  
+            <p>Box 1 paragraph 5</p>                 
+            <p>Box 2 paragraph 5</p>
+            <p>Box 2 paragraph 3</p>                  
+            <p>Box 1 paragraph 5</p>                 
+            <p>Box 2 paragraph 4</p>
+            <p>Box 2 paragraph 5</p>    
+    </div>
+
+<br>
+<br>
+<br>
+    <!-- another use of pseudo class can be to insert text before and after something -->
+    <!-- it is practically used to insert symbols before somthing  -->
+    <div class="container3">
+        <!-- here we see how we will add txt before and after the  paragraph tag-->
+        <!-- ****** to be noted that before and after does not mean outside the paragraph tag but inside only just before and after the text in the tag  -->
+        <p>good morning</p>
+    </div> 
 </body>
 </html>
