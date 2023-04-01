@@ -1,0 +1,16 @@
+java script deals with the functionality of the site
+it provides dynamism and action. js is used in ml web and many other places
+
+
+in web brower inspect provides us with coonsole which is a java script object and it provides some method 
+it is used to log something  into the console
+log is a method of console.
+we acess methods using the dot operators
+it is a method to print something just like python
+wee cant write java script code in html like css and it is one of its drawback
+
+
+
+we can add java script in html file using script tag
+***we shold always keep css in head so that it gets loded first and then script tag at the end of all the divisions and everything
+(after js angular js comes)
