@@ -9,8 +9,6 @@ console.log("this is the checking if js works or not");
 
 
 
-
-
 // * selection of target  input data on to console 
 const TASKCONTAINER = document.querySelector(".task_container")
 // QUERRY SELECTOR is used to select the class or id of the html file
@@ -46,7 +44,6 @@ const savechanges = () => {
 
 
 
-
 //  * function that makes new card each time data is entered
 
 // here we use the (``) symbol to enter the code that we need to make our new card with new data  
@@ -71,14 +68,12 @@ const newcard = `
 
 
 
-
 TASKCONTAINER.insertAdjacentHTML('beforeend',newcard);// insertAdjacentHTML is used to insert the new card in the html file 
 // IT EXTRACTS THE RECENT CHILD AND ADDS IT IN THE WAY WE WANT IT TO BE
 // above we said adjecent html to the task container and specified newcard to it 
 // HERE WE WANT TO ADD CARD RIGHT AFTER THE CURRENT CARD SO WE DO BEFORE END AND TO THE ADJECENT 
 // (as a result the card comes on right adjecent to the previous card)
 };
-
 
 
 
