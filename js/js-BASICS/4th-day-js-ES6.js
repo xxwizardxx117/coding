@@ -152,6 +152,18 @@ outsidefunc();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // * ASYNCHRONOUS JS
 // synchronous means happening at same time (real timehappening things)
 // asynchronous means that thing get done right now but we get the results at a later future
@@ -175,8 +187,11 @@ fetch("https://jsonplaceholder.typicode.com/users")
 
 
 console.log  ( "---------------" );
-// to do it in normal way 
 
+
+
+
+// * to do it in normal way 
 // async function getdata(){ 
                 // this syntax can be used
 //     const result = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -184,11 +199,14 @@ console.log  ( "---------------" );
 //     console.log(data);
 // }
 
-//  in ES6 we can do it in this way 
+// * in ES6 we can do( .then command) it in this way 
     const getdata = async () => {  // here this the syntax
     const result3 = await fetch("https://jsonplaceholder.typicode.com/users"); // here we store all the data in the variable result  and we will wait for the fetch 
     const data2 = await result3.json(); // here we store the data in the variable data and we will wait for the result to be converted into json
     console.log(data2);// after conversion we just publish the data onto the console
 };
+getdata(); // we also need to call the function to get the data
 
-getdata();
+
+// here async is much  better than then 
+// when comes to nested api it is very difficult to handle it with then
