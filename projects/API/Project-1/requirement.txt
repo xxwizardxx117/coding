@@ -1,0 +1,45 @@
+
+
+                                                    // LIBRARY MANAGEMENT SYSTEM
+
+// requirements of our js file 
+
+
+// we are a book management company
+
+// we have collection of 
+
+//1 books
+    //  ISBN(idea of the book), title, pub date, language, num page, author[], category[]
+//2 authors
+    // ids , name, books[]
+//3 publications
+    // id, name, books[]
+
+
+// so we have to make API  CONSIDERING  all of the above    
+
+
+// NOW WE WILL DECIDE FOR WHAT THIGS DO WE NEED AN API 
+// 1. books
+    //  WE NEED AN API FOR all the books -done
+    // api to get specific book based on isbn -done
+    // api to get list of books based on category- done 
+    // api to get list of books based on languages -done 
+
+// 2. authors
+    // WE NEED AN API FOR all the authors - done 
+    // api to get specific author based on id- done 
+    // api to get list of authors based on books -done
+
+// 3. publications
+    // WE NEED AN API FOR all the publications - done 
+    // api to get specific publication based on id - done 
+    // api to get list of publications based on books- done
+
+
+
+
+    //  we dont have a database so we will make a database using js
+    //  we will make a database using array of objects
+

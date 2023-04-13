@@ -1,0 +1,126 @@
+<!-- 
+    
+    js has a limitation that is that it cant run outside of the browser
+
+    node js can work outside of browser , it can interact with other servers , it can work on iot devices and do more stuff-->
+
+
+        <!-- node js is an open source and cross platform runtime environment 
+        
+        what is runtime environment?
+
+            in general we mean it is the time when the program is executing -->
+
+
+
+      *<!-- node js is a runtime environment for executing javascript code outside of the browser -->
+
+
+
+            <!--  -chrome v8 is runtime environment for chorme->
+            <!--  - chakra is runtime environment for edge  -->
+            <!-- spider monkey is runtime environment for mozilla -->
+
+
+
+
+        <!-- why runtime is imoportant? 
+        
+            as it provides the required apis to execute the code --
+            as it provides the required libraries to execute the code
+            as it provides the acess to the global objects to execute the code
+            as it provides the asess to the hard ware resources to execute the code
+        
+        -->
+
+
+
+        <!-- why is node js more important 
+        
+            *it has no dom
+            *it has no doccumnet (as it has global document)
+
+            the feature that make it invaluable are
+             *it is single-threaded and one core   
+             core are object of processor which do jobs
+             single threaded means that it uses only one thread and one core to execute the code 
+             so if we have 4 cores and 4 threads then it will use only one core and one thread to execute the code
+             if we use all and each node package can entertain 1000 servers the a total of 4000 servers can be entertained
+             its not possible with other programming languages as they use more than one core and more than one thread to execute the code
+             *non-blocking I/O
+             we saw asynchronous and synchronous concept where synchronous task get executed first (in real time) and then asynchronous task get executed (as they need time to execute)
+             but node js doesnt do this it treats theem equally and executes them at the same time
+             so no blocking I/O
+        -->
+
+
+
+
+        <!--* npm -->
+        <!--
+            what is mpm ?
+            npm is a package manager for javascript
+            it is a command line tool that installs, updates or uninstalls node packages    
+            its full form is node package manager 
+
+            why it is called a packet manager
+            as it manages (unpacks bundels) the packages of node js code which is bundeled         -->
+
+
+        <!--* PORTS -->
+         <!-- 
+        it is entry point for the servers
+        it is a gateway through which external services can enter your system
+            examples are 
+            databases 
+            authentication services
+            security services
+            payment gateways 
+        WE CAN HAVE AS MANY AS PORTS WE NEED BUT NO 2 SERVERS SHOULD HAVE SAME PORTS-->
+
+
+
+        <!-- *HEADERS -->
+         <!-- 
+                CONNECTION
+            A----------------B
+            SERVER A        SERVER B
+            THERE IS ALSO SOME ADDITIONAL INFORMATION WHICH GETS SHARED ALSO 
+            THIS IS CALLED HEADERS
+            it is in a coded format we cant understand
+        -->
+
+
+        <!-- *HTTPS -->
+        <!-- 
+            https status codes-- these are numeric codes to define certain situations(states)
+            error msgs like 404 not found
+            they canbe
+            1. sucess --200
+            2. failure  ---404( not available)
+                        ---401 (unauthorized)
+                        ---403 (authorized but forbidden to acess)
+            3. seever error--500 -->
+
+
+
+        <!-- *JSON -->
+        <!-- 
+            json is shortend format to share data (exchange) betweeen two servers
+         -->
+
+
+
+
+         <!-- node js is used because if  we have some external package then and we want toinclude them in our JSON then we need to install them using node -->
+        <!-- we install external packages using npm i package name -->
+        <!-- we will use internal packets in the  begining -->
+        <!-- 1. file system  -->
+        <!-- 2. http  -->
+        <!-- 3. url  -->
+        <!-- 4. path  -->
+        <!-- 5. os  -->
+        <!-- 6. events  -->
+        <!-- 7. stream  -->
+        <!-- 8. query string  -->
+
