@@ -148,7 +148,7 @@ bookmgmtsys.get("/publication/book/:isbn",(req,res) => { // get method to get pu
 
 
 bookmgmtsys.listen(3000,()=>{    // made an optimized port using express
-    console.log("server is running");
+    console.log("server is running@3000");
 });
 
 // * here if want to create a lot of apis then we need to do node file name again and again
@@ -158,3 +158,6 @@ bookmgmtsys.listen(3000,()=>{    // made an optimized port using express
 // * to install nodemon we have to install it globally
 // * to install it globally we have to use -g
 // for every project we need to install it again and again
+//  to uninstall node mon do npm uninstall nodemon
+// * to install it do npm i nodemon
+//  to start nodemon do npx nodemon file name 
