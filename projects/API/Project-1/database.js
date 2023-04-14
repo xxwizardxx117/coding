@@ -16,6 +16,17 @@ const books = [
         author:[2],
         publications:[2],
         category:['fiction','adventure']
+    },
+    {
+        ISBN: '12345THREE',
+        title: 'The Secret',
+        pubdate: '2006-11-28',
+        language: 'English',
+        numPages: 199,
+        author: [3],
+        publications: [3,4],
+        category: ['Self Help', 'Psychology', 'Spirituality', 'Nonfiction']
+
     }
 ]
 
@@ -30,6 +41,11 @@ const author = [
     {   id:2,
         name:'Robin Sharma',
         books:['12345TWO']
+    },
+    {
+        id: 3,
+        name: 'Rhonda Byrne',
+        books: ['12345THREE']
     }
 ]
 
@@ -44,6 +60,17 @@ const publication = [
     {   id: 2,
         name: 'Harper Collins',
         books: ['12345TWO']
+    },
+    {
+        id: 3,
+        name: 'Atria Books',
+        books: ['12345THREE']
+    },
+    {
+        id: 4,
+        name: 'Beyond Words',
+        books: ['12345THREE']
+
     }
 ] 
 

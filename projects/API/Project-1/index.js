@@ -1,17 +1,83 @@
 const express = require("express");
+
+
+// *unlike response we need to use body-parser to parse the request body
+// *body-parser is extra entity so we need to require it 
+var bodyParser = require("body-parser");// body-parser is a middleware which is used to parse the request body
+// we need this to execute the post request
+// in order to acess post data we need to use body-parser
+// it allows express to access the post data(read body)
+// and then parse it or covert it into a Json FILE so that we can and machine can understand it
+
+
 //database 
 const database = require("./database"); // importing database.js file   
 //initializing express
 const bookmgmtsys = express();
+//initializing bodyParser
+// *being an extra entity it needs initialization 
+bookmgmtsys.use(bodyParser.urlencoded({extended:true})); // this is used to parse the request body
+// URLencoded({extend:true}) is function of request present in body parser methof
+// and is used to parse the data which is coming from the client
+// basically it is used to make requeest accept any format of data (req in code till now was having only string format)
+// *always needed to use postman or post request
+bookmgmtsys.use(bodyParser.json()); // this is used to parse the request body in json format only
+// we had specified the format of data in the post request also but here we are specifying it in the code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// GET 
 
 //route:      here is /
 //discrption: get all the books
 //access:     public
-//method:     get
+//method:     get 
 //params:     none
 bookmgmtsys.get("/",(req,res) => { // get method to get all the books
 return res.json({books:database.books});// as we put databsse.js in database const
 });
+
+
+
+// POST
+
+//route:      here is /book/new
+//discrption: add new book
+//access:     public
+//method:     post
+//params:     none
+bookmgmtsys.post("/book/new",(req,res) => {                                                                  // post method to add new book
+    const newBook = req.body;                                                                                // here we are getting the data from the client
+                     // req.body is used to get the data from the client 
+    database.books.push(newBook);                                                                            // here we are pushing the data to the database
+    //books was  are array in database.js file  //push is array method to add element to the array
+    return res.json({updatedBooks:database.books});                                                          // here we are sending the updated database to the client
+                        // key: value 
+// and we want the response to be in json format so we use json method
+});
+// *IN POST MAN PASTE THE URL LOCAL HOST NO + ROUTE 
+// *THEN SELECT THE DATA FORMAT TO RAW THEN FILE FORMAT TO JSON 
+// *PUT THE JSON DATA IN BODY PART OF THE POSTMAN 
+// *CLICK ON SEND THE NEW DATA SHOWS UP ON THE HOST 
+// *HERE THE HOSTS GETTS UPDATED BUT NOT THE DATABASE AS IT IS NOT LOCAL UPDATION 
+// *TO UPDATE LOCAL DATABASE WE NEED TO USE A DATABASES LIKE MONGO DB           
+
+
+// GET 
 
 //route:      here /is 
 //discrption: get specific books
@@ -27,6 +93,9 @@ bookmgmtsys.get("/is/:isbn",(req,res) => { // get method to get specific book us
     return res.json({book:getSpecificBook});
 });
 
+
+// GET
+
 //route:      here /c 
 //discrption: get books of specific category
 //access:     public
@@ -40,6 +109,8 @@ bookmgmtsys.get("/c/:category",(req,res) => { // get method to get books based o
     return res.json({book:getSpecificBook});
 });
 
+
+// GET 
 
 //route:      here /l 
 //discrption: get books of specific language
@@ -56,6 +127,32 @@ bookmgmtsys.get("/l/:language",(req,res) => { // get method to get books based o
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// GET 
+
 //route:      here /author 
 //discrption: get all authors
 //access:     public
@@ -65,6 +162,25 @@ bookmgmtsys.get("/author",(req,res) => { // get method to get books based on the
     return res.json({author:database.author});
 });
 
+// POST
+
+//route:      here is /author/new
+//discrption: add new author
+//access:     public
+//method:     post
+//params:     none
+bookmgmtsys.post("/author/new",(req,res) => {                                                                  
+    const newAuthor = req.body;                                                                               
+    database.author.push(newAuthor);                                                                            
+    return res.json({updatedAuthor:database.author});                                                          
+});
+
+
+
+
+
+
+// GET 
 
 //route:      here /author 
 //discrption: get all authors
@@ -80,6 +196,7 @@ bookmgmtsys.get("/author/:id",(req,res) => { // get method to get books based on
 });
 
 
+// GET 
 
 //route:      here /author/book 
 //discrption: get all authors
@@ -97,6 +214,28 @@ bookmgmtsys.get("/author/book/:isbn",(req,res) => { // get method to get books b
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// GET 
+
 //route:      here /publications 
 //discrption: get all publications
 //access:     public
@@ -107,6 +246,28 @@ bookmgmtsys.get("/publication",(req,res) => { // get all the books based on the 
 });
 
 
+// POST
+
+//route:      here is /publication/new
+//discrption: add new publication
+//access:     public
+//method:     post
+//params:     none
+bookmgmtsys.post("/publication/new",(req,res) => {                                                                
+    const newPublication = req.body;                
+    database.publication.push(newPublication);                                                                          
+    return res.json({updatedPublication:database.publication}); 
+    // return res.json(database.publication);
+    // we can also write the above like this                                               
+});
+
+
+
+
+
+
+
+// GET 
 
 //route:      here /publications 
 //discrption: get specific publications
@@ -123,7 +284,7 @@ bookmgmtsys.get("/publication/:id",(req,res) => { // get method to get  publicat
 
 
 
-
+// GET 
 
 //route:      here / publications/book
 //discrption: get the publications based on the book
@@ -137,9 +298,6 @@ bookmgmtsys.get("/publication/book/:isbn",(req,res) => { // get method to get pu
     }
     return res.json({publication:getSpecificPublication});
 });
-
-
-
 
 
 

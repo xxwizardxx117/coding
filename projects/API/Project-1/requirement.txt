@@ -21,6 +21,10 @@
 
 
 // NOW WE WILL DECIDE FOR WHAT THIGS DO WE NEED AN API 
+
+// GET REQUEST
+
+
 // 1. books
     //  WE NEED AN API FOR all the books -done
     // api to get specific book based on isbn -done
@@ -40,6 +44,36 @@
 
 
 
+
+
+
+
+
+
+//POST REQUEST - ADD NEW DATA
+we cant add new data directly to our database so we need a application programming interface to add new data to our database
+IT IS DONE BY POSTMAN
+
+
+
+//1. books
+    // add new book - done
+//2. authors
+    // add new publication - done
+//3. publications
+    // add new author - done
+
+
+
+
+
+
+    
+
+
+    // HERE  WE USE POSTMAN IS A TOOL TO TEST OUR API
+    // WE WILL USE POSTMAN TO TEST OUR API
+    // IT IS A POPULAR ORGANIZATION FOR GOOGLE CODE OF SUMMER OF CODE    
+
     //  we dont have a database so we will make a database using js
     //  we will make a database using array of objects
-
