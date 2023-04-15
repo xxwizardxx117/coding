@@ -17,6 +17,16 @@
     // id, name, books[]
 
 
+
+
+
+
+
+
+
+
+
+
 // so we have to make API  CONSIDERING  all of the above    
 
 
@@ -50,7 +60,16 @@
 
 
 
-//POST REQUEST - ADD NEW DATA
+
+
+
+
+
+
+// DAY 2 - API PROJECT
+
+//POST REQUEST - ADD NEW 
+
 we cant add new data directly to our database so we need a application programming interface to add new data to our database
 IT IS DONE BY POSTMAN
 
@@ -67,6 +86,24 @@ IT IS DONE BY POSTMAN
 
 
 
+
+
+
+
+
+//DAY 3 - API PROJECT
+
+//   POST/DELETE REQUEST - used to update the current data and provide new / used to delete a certain data 
+
+//1 publication
+    // update publication and add changed value to books - done
+
+
+//   DELETE REQUEST - used to delete a certain data 
+    //1. book
+        // delete a book - done
+        // delete an author from book 
+        // delete an author from a book and related book from author - done
 
     
 

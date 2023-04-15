@@ -77,6 +77,54 @@ bookmgmtsys.post("/book/new",(req,res) => {                                     
 // *TO UPDATE LOCAL DATABASE WE NEED TO USE A DATABASES LIKE MONGO DB           
 
 
+
+
+
+// DELETE
+//route:      here /book/delete
+//discrption: delete specific book using isbn 
+//access:     public
+//method:     DELETE
+//params:     isbn
+bookmgmtsys.delete("/book/delete/:isbn",(req,res)=>{
+    // whichever book doesnot match with the isbn add them to a new updated database 
+    // rest will be filtered out
+    const updatedBookdatabase = database.books.filter((book) => book.ISBN !== req.params.isbn)
+database.books = updatedBookdatabase;
+return res.json({books: database.books})});
+
+
+// DELETE
+//route:      here /book/delete/author
+//discrption: delete author from book using isbn and id 
+//access:     public
+//method:     DELETE
+//params:     isbn, ID
+
+bookmgmtsys.delete("/book/delete/author/:isbn/:authorID",(req,res)=>{
+    // update book database
+    database.books.forEach((book)=>{
+        if(book.ISBN === req.params.isbn){
+            const newAuthorList = book.author.filter((author)=> author !== parseInt(req.params.authorID));
+            book.author = newAuthorList;
+            return;
+        }
+    });
+
+    //update the author database
+    database.author.forEach((author)=>{
+        if(author.id === parseInt(req.params.authorID)){
+            const newBookList = author.books.filter((book)=> book !== req.params.isbn);
+            author.books = newBookList;
+            return;
+        }
+    });
+
+    return res.json({books: database.books, author: database.author, message: "author was deleted"});
+});
+
+
+
 // GET 
 
 //route:      here /is 
@@ -262,6 +310,54 @@ bookmgmtsys.post("/publication/new",(req,res) => {
 });
 
 
+
+// PUT 
+
+//route:      here is /publication/update/book
+//discrption: add or update new publication
+//access:     public
+//method:     put
+//params:     ISBN
+bookmgmtsys.put("/publication/update/book/:isbn",(req,res) => { 
+// here we are updating the publication database to update the book in publication using isbn, so if we add a book in publication the id in book data base also needs to be changed 
+// update publication database
+    database.publication.forEach((pub) => 
+    { // for each is same as for loop but it is used for arrays and objects and it doesnt require any counter
+        //now as we see that we want to update the publication database
+        // here there are two things that we have to take care of 
+
+
+        // 1.here if the id is already present we need to update value within it 
+        if(pub.id === req.body.pubId){
+            // pub.id means id of database 
+            // req.body.pubId means id of the body
+            return pub.books.push(req.params.isbn); 
+            //update books in publication database
+            // here  we add the book into the publication database via its isbn
+                    // * the above is not solving the probem of if same isbn is added to the same publication
+        }
+
+        // *2.if the id is not present we need to add the id and the new data regarding publicatuion to the database
+        // and to do this we need to use the else statement and make new function for it
+    });
+
+
+// *if a book is added to a publication then the publication id in the book database also needs to be updated as it is a book and must be recorded in the book database then only isbn will work
+//* else only the book will be added to the publication database but not in the book database
+//* for non recorded book new function is to be made
+
+// update the book database
+    database.books.forEach((book) => {
+        if(book.ISBN === req.params.isbn){
+            book.publications = req.body.pubId;
+            return;
+        }
+    });
+    
+    return res.json({books:database.books,publication:database.publication, message:"Successfully updated publication"});
+                        //to show the output we do above
+
+});
 
 
 
