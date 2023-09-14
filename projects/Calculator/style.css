@@ -1,0 +1,42 @@
+.app_container 
+{
+  width: 400px;
+  height: 400px;
+}
+
+
+
+.Calculator {
+    display :grid;
+    grid-template-columns:repeat(4,50px);
+  }
+
+
+
+.display {
+    grid-column-start:1;
+    grid-column-end:5;
+    height:60px;
+    font-size:30px;
+    text-align:right;
+    border:1px solid black;
+    padding-top:5px;
+    background-color:yellow;
+}
+
+
+button {
+    height :50px;
+    background-color:white;
+    border:1px solid grey;
+    border-radius:50%;
+}
+  
+.operator{
+   background-color:pink;
+}
+
+
+.operation{
+    background-color:orange;
+}
